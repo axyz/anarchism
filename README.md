@@ -1,4 +1,5 @@
-# Anarchism React components with NO STATE.
+# Anarchism
+React components with NO STATE.
 
 Anarchism is a curated collection of [React](https://facebook.github.io/react/)
 components intended to be used on unidirectional data flow architectures. The
@@ -28,7 +29,8 @@ All the components will also play nicely when rendered on the server (isomorphic
 applications), especially impure components that are dealing with the DOM will
 have fallback solutions when the `window` object is not available.
 
-## How to use it To use anarchism components you just need to install anarchism
+## How to use it
+To use anarchism components you just need to install anarchism
 as a dependency in your project: ``` $ npm install --save anarchism ```
 
 then simply import the components you want to use: ```javascript import {
@@ -37,7 +39,8 @@ Intreact, Zlide } from 'anarchism' ```
 and use them as normal React components according to the respective
 documentations.
 
-## What it is not This project do not want to provide ready to use components
+## What it is not
+This project do not want to provide ready to use components
 with a common design. You will not find the typical front-end elements you can
 expect from common frameworks such as [bootstrap](http://getbootstrap.com/),
 [foundation](http://foundation.zurb.com/),
@@ -60,7 +63,8 @@ properties or overwrite when needed. In a real project you will probably end up
 anyway spending more time overriding stuff than actually composing your
 application.
 
-## Why we need anarchism This is an ongoing project where I want to collect
+## Why we need anarchism
+This is an ongoing project where I want to collect
 components that respect the above rules. Ideally every component should be as
 much minimalistic and abstract as possible and you should not feel the needs to
 change it or to not being using all of its features.
@@ -75,7 +79,8 @@ This library want to abstract these patterns and its expected usage on real
 world project would be to create complete and styled front-end components that
 use anarchism components as dependencies to implement their behavior.
 
-## Want to contribute? There are at least 4 ways to contribute to the project:
+## Want to contribute?
+There are at least 4 ways to contribute to the project:
 - Adding very simple components that abstract some basic pattern directly inside
 this repository
 - Open an issue to propose an external project (available on npm) that may fit
