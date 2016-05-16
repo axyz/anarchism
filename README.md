@@ -31,10 +31,15 @@ have fallback solutions when the `window` object is not available.
 
 ## How to use it
 To use anarchism components you just need to install anarchism
-as a dependency in your project: ``` $ npm install --save anarchism ```
+as a dependency in your project:
+```
+$ npm install --save anarchism
+```
 
-then simply import the components you want to use: ```javascript import {
-Intreact, Zlide } from 'anarchism' ```
+then simply import the components you want to use:
+```javascript
+import { Intreact, Zlide } from 'anarchism';
+```
 
 and use them as normal React components according to the respective
 documentations.
