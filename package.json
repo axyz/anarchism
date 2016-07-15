@@ -2,7 +2,7 @@
   "name": "anarchism",
   "version": "0.0.1",
   "description": "React stateless components library",
-  "main": "index.js",
+  "main": "dist/anarchism.js",
   "scripts": {
     "build": "NODE_ENV=production webpack",
     "lint": "eslint components",
