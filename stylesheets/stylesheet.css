@@ -243,3 +243,16 @@ a {
 @media screen and (max-width: 42em) {
   .site-footer {
     font-size: 0.9rem; } }
+
+
+/* Styles for examples */
+.zoom_wrapper {
+  background-color: rgba(255,255,255, 0.8);
+}
+
+#example-zoom-content {
+  margin: 6px;
+  padding: 12px;
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.5);
+}

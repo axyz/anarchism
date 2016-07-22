@@ -1,0 +1,22 @@
+{
+  "name": "anarchism-website",
+  "private": true,
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "webpack src/index.js --output-path dist --output-file index.js",
+    "build": "webpack src/index.js --output-path dist --output-file index.js -p"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zalando-incubator/anarchism/issues"
+  },
+  "homepage": "https://zalando-incubator.github.io/anarchism/",
+  "devDependencies": {
+    "anarchism": "0.0.1",
+    "react": "15.2.1",
+    "react-dom": "15.2.1",
+    "webpack": "1.13.1"
+  }
+}

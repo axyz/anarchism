@@ -7,9 +7,7 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css">
-    <script defer async src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/prism.min.js"></script>
 </head>
 <body>
 <section class="page-header">
@@ -74,11 +72,38 @@
 
     <p>then simply import the components you want to use:</p>
 
-    <pre><code class="language-js"
->import { Intreact, Zlide } from 'anarchism';</code></pre>
+    <pre><code class="language-jsx"
+>import React from 'react';
+import ReactDOM from 'react-dom';
 
-    <p>and use them as normal React components according to the respective
-        documentations.</p>
+import {Zoom} from 'anarchism';
+
+ReactDOM.render(
+    &lt;div&gt;
+        &lt;Zoom
+            isVisible={true} // show or hide the modal (default to false)
+            width=&quot;50%&quot; // width of the modal in css format (default to &quot;100%&quot;)
+            height=&quot;50%&quot; // height of the modal in css format (default to &quot;100%&quot;)
+            hAlign=&quot;center&quot; // horizontal alignment [&quot;left&quot;, &quot;center&quot;, &quot;right&quot;] (default to &quot;center&quot;)
+            vAlign=&quot;center&quot; // vertical alignment [&quot;top&quot;, &quot;center&quot;, &quot;bottom&quot;] (default to &quot;center&quot;)
+            offset={{ // offset from the current layout position
+                x: '-20px' // horizontal offset in css format (default to &quot;0&quot;)
+                y: '5%' // vertical offset in css format (default to &quot;0&quot;)
+            }}
+            zIndex={99} // zIndex for the modal (default to 1)
+            overlay={someNode} // jsx node element to create a background overlay
+        &gt;
+
+            ... // content of the modal
+
+        &lt;/Zoom&gt;
+    &lt;/div&gt;,
+    document.getElementById('zoom-example')
+);</code></pre>
+
+    <p>Click <button id="example-zoom-button">The Button</button> to see how it looks with some minimal user styling.</p>
+
+    <div id="example-zoom"></div>
 
     <h2>
         <a id="what-it-is-not" class="anchor" href="#what-it-is-not" aria-hidden="true"><span aria-hidden="true"
@@ -182,6 +207,8 @@
     </ul>
 
 </section>
-
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/components/prism-jsx.min.js"></script>
+<script src="dist/index.js"></script>
 </body>
 </html>
