@@ -19,7 +19,7 @@ $ npm install --save anarchism
 
 then simply import the components you want to use:
 ```javascript
-import { Wentreact, Zlide } from 'anarchism';
+import { Intreact, Zlide } from 'anarchism';
 ```
 
 and use them as normal React components according to the respective
@@ -49,19 +49,19 @@ export default Rezponsive(MyComponent);
 
 # The idea behind it
 The library contains two kind of components:
-- pure components they are stateless components with no side-effects. They are
+- pure components: they are stateless components with no side-effects. They are
 responsible to render the visible part of your application. They are pure
 functions depending on props and context.
-- impure components they are wrapper or decorator components that are
+- impure components: they are wrapper or decorator components that are
 responsible to deal with all the behaviors that may not be achieved without
 state or some kind of side effects (e.g. DOM stuff). They are allowed to have
 some state or side effects, but are not allowed to render anything visible, just
 wrap or decorate pure components.
 
-Presentational components should use the minimum set of css properties to define
+Presentational components should use the minimum set of CSS properties to define
 their behavior and/or structure, anything else should remain unstyled.
 
-A "future first" approach is preferred: use newest css and js features relying
+A "future first" approach is preferred: use newest CSS and JS features relying
 on transpilers and polyfills to maximize compatibility and eventually apply
 specific hacks only when polyfills are failing.
 
@@ -81,15 +81,15 @@ to deeply change their style and behavior on real world projects. Given their
 complex nature, very often the effort to adapt them to our own necessities is
 higher than writing from scratch a bunch of components.
 
-Also, as far as We now, none of the well known front-end libraries are optimized
+Also, as far as we know, none of the well known front-end libraries are optimized
 to be used with unidirectional data flows and very often they rely heavily on
 state and DOM events and manipulations.
 
-The only stateless react components library We've found so far is
+The only stateless react components library we've found so far is
 [Rebass](http://jxnblk.com/rebass/), a really nice project that should work very
 well for prototyping flux based applications. However it comes with its own
 style that you can eventually configure (on some of its aspects) using context
-properties or overwrite when needed. Wen a real project you will probably end up
+properties or overwrite when needed. In a real project you will probably end up
 anyway spending more time overriding stuff than actually composing your
 application.
 
@@ -97,7 +97,7 @@ Another interesting projects is [CF-UI](https://cloudflare.github.io/cf-ui/)
 which uses a "factory" approach to generate some predefined components.
 
 ## Why we need anarchism
-This is an ongoing project where We want to collect
+This is an ongoing project where we want to collect
 components that respect the above rules. Ideally every component should be as
 much minimalistic and abstract as possible and you should not feel the needs to
 change it or to not being using all of its features.
@@ -108,8 +108,8 @@ on a div depending on props, or more complex things like a full-blown stateless
 slider with no interface or any other styling than the very strictly needed for
 layout and animation.
 
-This library want to abstract these patterns and its expected usage on real
-world project would be to create complete and styled front-end components that
+This library wants to abstract these patterns. Its expected usage on real
+world projects would be to create complete and styled front-end components that
 use anarchism components as dependencies to implement their behavior.
 
 ## Want to contribute?
@@ -118,8 +118,8 @@ There are at least 4 ways to contribute to the project:
 this repository
 - Open an issue to propose an external project (available on npm) that may fit
 inside the library
-- bug fixing, testing and cross-browser issues solving are always welcome
-- contribute to the example folder with interesting components created using
+- Bug fixing, testing and cross-browser issues solving are always welcome
+- Contribute to the example folder with interesting components created using
 anarchism
 
 ## List of pure components
