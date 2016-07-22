@@ -4,6 +4,7 @@ node_js:
 
 install:
   - npm install
+  - webpack
 
 script:
   - npm test
