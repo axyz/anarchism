@@ -56,11 +56,11 @@ to deeply change their style and behavior on real world projects. Given their
 complex nature, very often the effort to adapt them to our own necessities is
 higher than writing from scratch a bunch of components.
 
-Also, as far as I now, none of the well known front-end libraries are optimized
+Also, as far as we now, none of the well known front-end libraries are optimized
 to be used with unidirectional data flows and very often they rely heavily on
 state and DOM events and manipulations.
 
-The only stateless react components library I've found so far is
+The only stateless react components library we've found so far is
 [Rebass](http://jxnblk.com/rebass/), a really nice project that should work very
 well for prototyping flux based applications. However it comes with its own
 style that you can eventually configure (on some of its aspects) using context
@@ -69,7 +69,7 @@ anyway spending more time overriding stuff than actually composing your
 application.
 
 ## Why we need anarchism
-This is an ongoing project where I want to collect
+This is an ongoing project where we want to collect
 components that respect the above rules. Ideally every component should be as
 much minimalistic and abstract as possible and you should not feel the needs to
 change it or to not being using all of its features.
@@ -107,3 +107,14 @@ anarchism
   dumb react components.
 - [rezponsive](https://github.com/zalando/rezponsive) - React decorator for
   responsive behaviors.
+
+# License
+
+The MIT License (MIT)
+Copyright (c) 2016 Zalando SE
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
