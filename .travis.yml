@@ -7,4 +7,5 @@ install:
   - webpack
 
 script:
+  - npm run lint
   - npm test
