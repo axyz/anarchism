@@ -1,5 +1,7 @@
+[![npm version](https://badge.fury.io/js/anarchism.svg)](https://badge.fury.io/js/anarchism)
+
 # Anarchism
-React components with NO STATE.
+React components with **NO STATE**.
 
 Anarchism is a curated collection of [React](https://facebook.github.io/react/)
 components intended to be used on unidirectional data flow architectures. The
@@ -8,6 +10,44 @@ most well known is probably [redux](http://redux.js.org/) (but also other
 approach that may benefit from stateless components may be used as well (e.g.
 FRP libraries, GraphQL + [Relay](https://facebook.github.io/relay/), etc..).
 
+## How to use it
+To use anarchism components you just need to install anarchism
+as a dependency in your project:
+```
+$ npm install --save anarchism
+```
+
+then simply import the components you want to use:
+```javascript
+import { Wentreact, Zlide } from 'anarchism';
+```
+
+and use them as normal React components according to the respective
+documentations.
+```javascript
+import React, { Component } from 'react';
+import { Rezponsive, Zlide } from 'anarchism';
+
+class MyComponent extends Component {
+    render() {
+        return (
+            <Zlide
+                currentSlide={0}
+                visibleSlides={3}
+                onClick={(index) => console.log('slide click ' + index)}
+            >
+
+                <img ... /> <img ... /> <img ... /> ...
+
+            </Zlide>
+        );
+    }
+}
+
+export default Rezponsive(MyComponent);
+ ```
+
+# The idea behind it
 The library contains two kind of components:
 - pure components they are stateless components with no side-effects. They are
 responsible to render the visible part of your application. They are pure
@@ -29,21 +69,6 @@ All the components will also play nicely when rendered on the server (isomorphic
 applications), especially impure components that are dealing with the DOM will
 have fallback solutions when the `window` object is not available.
 
-## How to use it
-To use anarchism components you just need to install anarchism
-as a dependency in your project:
-```
-$ npm install --save anarchism
-```
-
-then simply import the components you want to use:
-```javascript
-import { Intreact, Zlide } from 'anarchism';
-```
-
-and use them as normal React components according to the respective
-documentations.
-
 ## What it is not
 This project do not want to provide ready to use components
 with a common design. You will not find the typical front-end elements you can
@@ -56,20 +81,23 @@ to deeply change their style and behavior on real world projects. Given their
 complex nature, very often the effort to adapt them to our own necessities is
 higher than writing from scratch a bunch of components.
 
-Also, as far as we now, none of the well known front-end libraries are optimized
+Also, as far as We now, none of the well known front-end libraries are optimized
 to be used with unidirectional data flows and very often they rely heavily on
 state and DOM events and manipulations.
 
-The only stateless react components library we've found so far is
+The only stateless react components library We've found so far is
 [Rebass](http://jxnblk.com/rebass/), a really nice project that should work very
 well for prototyping flux based applications. However it comes with its own
 style that you can eventually configure (on some of its aspects) using context
-properties or overwrite when needed. In a real project you will probably end up
+properties or overwrite when needed. Wen a real project you will probably end up
 anyway spending more time overriding stuff than actually composing your
 application.
 
+Another interesting projects is [CF-UI](https://cloudflare.github.io/cf-ui/)
+which uses a "factory" approach to generate some predefined components.
+
 ## Why we need anarchism
-This is an ongoing project where we want to collect
+This is an ongoing project where We want to collect
 components that respect the above rules. Ideally every component should be as
 much minimalistic and abstract as possible and you should not feel the needs to
 change it or to not being using all of its features.
@@ -95,17 +123,17 @@ inside the library
 anarchism
 
 ## List of pure components
-- [zlide](https://github.com/zalando/react-zlide) - Lightweight and stateless
+- [zlide](https://github.com/zalando-incubator/react-zlide) - Lightweight and stateless
   slider component for React.js
 - [callout](https://github.com/zalando/react-callout) - Lightweight and
   stateless callout component for React.js
-- [zoom](https://github.com/zalando/react-zoom) - Lightweight and stateless
+- [zoom](https://github.com/zalando-incubator/react-zoom) - Lightweight and stateless
   modal component for React.js based on flexbox
 
 ## List of impure components
-- [intreact](https://github.com/zalando/intreact) - Handling interactions with
+- [intreact](https://github.com/zalando-incubator/intreact) - Handling interactions with
   dumb react components.
-- [rezponsive](https://github.com/zalando/rezponsive) - React decorator for
+- [rezponsive](https://github.com/zalando-incubator/rezponsive) - React decorator for
   responsive behaviors.
 
 # License
