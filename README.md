@@ -1,4 +1,4 @@
-[![npm version](https://badge.fury.io/js/anarchism.svg)](https://badge.fury.io/js/anarchism)
+[![npm version](https://badge.fury.io/js/anarchism.svg)](https://badge.fury.io/js/anarchism) [![Build Status](https://travis-ci.org/zalando-incubator/anarchism.svg?branch=master)](https://travis-ci.org/zalando-incubator/anarchism)
 
 # Anarchism
 React components with **NO STATE**.
