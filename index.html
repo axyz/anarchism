@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
+<head>
     <meta charset="UTF-8">
     <title>Anarchism by zalando-incubator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,163 +8,180 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">Anarchism</h1>
-      <h2 class="project-tagline">React Stateless Components Library</h2>
-      <a href="https://github.com/zalando-incubator/anarchism" class="btn">View on GitHub</a>
-      <a href="https://github.com/zalando-incubator/anarchism/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/zalando-incubator/anarchism/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css">
+    <script defer async src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/prism.min.js"></script>
+</head>
+<body>
+<section class="page-header">
+    <h1 class="project-name">Anarchism</h1>
+    <h2 class="project-tagline">React Stateless Components Library</h2>
+    <a href="https://github.com/zalando-incubator/anarchism" class="btn">View on GitHub</a>
+    <a href="https://github.com/zalando-incubator/anarchism/zipball/master" class="btn">Download .zip</a>
+    <a href="https://github.com/zalando-incubator/anarchism/tarball/master" class="btn">Download .tar.gz</a>
+</section>
 
-    <section class="main-content">
-      <h1>
-<a id="anarchism" class="anchor" href="#anarchism" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Anarchism</h1>
+<section class="main-content">
+    <h1>
+        <a id="anarchism" class="anchor" href="#anarchism" aria-hidden="true"><span aria-hidden="true"
+                                                                                    class="octicon octicon-link"></span></a>Anarchism
+    </h1>
 
-<p>React components with NO STATE.</p>
+    <p>React components with NO STATE.</p>
 
-<p>Anarchism is a curated collection of <a href="https://facebook.github.io/react/">React</a>
-components intended to be used on unidirectional data flow architectures. The
-most well known is probably <a href="http://redux.js.org/">redux</a> (but also other
-<a href="http://facebook.github.io/flux/">flux</a> like implementations); however any
-approach that may benefit from stateless components may be used as well (e.g.
-FRP libraries, GraphQL + <a href="https://facebook.github.io/relay/">Relay</a>, etc..).</p>
+    <p>Anarchism is a curated collection of <a href="https://facebook.github.io/react/">React</a>
+        components intended to be used on unidirectional data flow architectures. The
+        most well known is probably <a href="http://redux.js.org/">redux</a> (but also other
+        <a href="http://facebook.github.io/flux/">flux</a> like implementations); however any
+        approach that may benefit from stateless components may be used as well (e.g.
+        FRP libraries, GraphQL + <a href="https://facebook.github.io/relay/">Relay</a>, etc..).</p>
 
-<p>The library contains two kind of components:</p>
+    <p>The library contains two kind of components:</p>
 
-<ul>
-<li>pure components they are stateless components with no side-effects. They are
-responsible to render the visible part of your application. They are pure
-functions depending on props and context.</li>
-<li>impure components they are wrapper or decorator components that are
-responsible to deal with all the behaviors that may not be achieved without
-state or some kind of side effects (e.g. DOM stuff). They are allowed to have
-some state or side effects, but are not allowed to render anything visible, just
-wrap or decorate pure components.</li>
-</ul>
+    <ul>
+        <li>pure components they are stateless components with no side-effects. They are
+            responsible to render the visible part of your application. They are pure
+            functions depending on props and context.
+        </li>
+        <li>impure components they are wrapper or decorator components that are
+            responsible to deal with all the behaviors that may not be achieved without
+            state or some kind of side effects (e.g. DOM stuff). They are allowed to have
+            some state or side effects, but are not allowed to render anything visible, just
+            wrap or decorate pure components.
+        </li>
+    </ul>
 
-<p>Presentational components should use the minimum set of css properties to define
-their behavior and/or structure, anything else should remain unstyled.</p>
+    <p>Presentational components should use the minimum set of css properties to define
+        their behavior and/or structure, anything else should remain unstyled.</p>
 
-<p>A "future first" approach is preferred: use newest css and js features relying
-on transpilers and polyfills to maximize compatibility and eventually apply
-specific hacks only when polyfills are failing.</p>
+    <p>A "future first" approach is preferred: use newest css and js features relying
+        on transpilers and polyfills to maximize compatibility and eventually apply
+        specific hacks only when polyfills are failing.</p>
 
-<p>All the components will also play nicely when rendered on the server (isomorphic
-applications), especially impure components that are dealing with the DOM will
-have fallback solutions when the <code>window</code> object is not available.</p>
+    <p>All the components will also play nicely when rendered on the server (isomorphic
+        applications), especially impure components that are dealing with the DOM will
+        have fallback solutions when the <code>window</code> object is not available.</p>
 
-<h2>
-<a id="how-to-use-it" class="anchor" href="#how-to-use-it" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to use it</h2>
+    <h2>
+        <a id="how-to-use-it" class="anchor" href="#how-to-use-it" aria-hidden="true"><span aria-hidden="true"
+                                                                                            class="octicon octicon-link"></span></a>How
+        to use it</h2>
 
-<p>To use anarchism components you just need to install anarchism
-as a dependency in your project:</p>
+    <p>To use anarchism components you just need to install anarchism
+        as a dependency in your project:</p>
 
-<pre><code>$ npm install --save anarchism
+    <pre><code class="language-bash">npm install --save anarchism
 </code></pre>
 
-<p>then simply import the components you want to use:</p>
+    <p>then simply import the components you want to use:</p>
 
-<div class="highlight highlight-source-js"><pre><span class="pl-k">import</span> { <span class="pl-smi">Intreact</span>, <span class="pl-smi">Zlide</span> } <span class="pl-k">from</span> <span class="pl-s"><span class="pl-pds">'</span>anarchism<span class="pl-pds">'</span></span>;</pre></div>
+    <pre><code class="language-js"
+>import { Intreact, Zlide } from 'anarchism';</code></pre>
 
-<p>and use them as normal React components according to the respective
-documentations.</p>
+    <p>and use them as normal React components according to the respective
+        documentations.</p>
 
-<h2>
-<a id="what-it-is-not" class="anchor" href="#what-it-is-not" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What it is not</h2>
+    <h2>
+        <a id="what-it-is-not" class="anchor" href="#what-it-is-not" aria-hidden="true"><span aria-hidden="true"
+                                                                                              class="octicon octicon-link"></span></a>What
+        it is not</h2>
 
-<p>This project do not want to provide ready to use components
-with a common design. You will not find the typical front-end elements you can
-expect from common frameworks such as <a href="http://getbootstrap.com/">bootstrap</a>,
-<a href="http://foundation.zurb.com/">foundation</a>,
-<a href="http://www.material-ui.com/">material-ui</a>, etc...</p>
+    <p>This project do not want to provide ready to use components
+        with a common design. You will not find the typical front-end elements you can
+        expect from common frameworks such as <a href="http://getbootstrap.com/">bootstrap</a>,
+        <a href="http://foundation.zurb.com/">foundation</a>,
+        <a href="http://www.material-ui.com/">material-ui</a>, etc...</p>
 
-<p>While those libraries are great for prototyping, you will always end up wanting
-to deeply change their style and behavior on real world projects. Given their
-complex nature, very often the effort to adapt them to our own necessities is
-higher than writing from scratch a bunch of components.</p>
+    <p>While those libraries are great for prototyping, you will always end up wanting
+        to deeply change their style and behavior on real world projects. Given their
+        complex nature, very often the effort to adapt them to our own necessities is
+        higher than writing from scratch a bunch of components.</p>
 
-<p>Also, as far as we know, none of the well known front-end libraries are optimized
-to be used with unidirectional data flows and very often they rely heavily on
-state and DOM events and manipulations.</p>
+    <p>Also, as far as we know, none of the well known front-end libraries are optimized
+        to be used with unidirectional data flows and very often they rely heavily on
+        state and DOM events and manipulations.</p>
 
-<p>The only stateless react components library know to us so far is
-<a href="http://jxnblk.com/rebass/">Rebass</a>, a really nice project that should work very
-well for prototyping flux based applications. However it comes with its own
-style that you can eventually configure (on some of its aspects) using context
-properties or overwrite when needed. In a real project you will probably end up
-anyway spending more time overriding stuff than actually composing your
-application.</p>
+    <p>The only stateless react components library know to us so far is
+        <a href="http://jxnblk.com/rebass/">Rebass</a>, a really nice project that should work very
+        well for prototyping flux based applications. However it comes with its own
+        style that you can eventually configure (on some of its aspects) using context
+        properties or overwrite when needed. In a real project you will probably end up
+        anyway spending more time overriding stuff than actually composing your
+        application.</p>
 
-<h2>
-<a id="why-we-need-anarchism" class="anchor" href="#why-we-need-anarchism" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Why we need anarchism</h2>
+    <h2>
+        <a id="why-we-need-anarchism" class="anchor" href="#why-we-need-anarchism" aria-hidden="true"><span
+                aria-hidden="true" class="octicon octicon-link"></span></a>Why we need anarchism</h2>
 
-<p>This is an ongoing project where we want to collect
-components that respect the above rules. Ideally every component should be as
-much minimalistic and abstract as possible and you should not feel the needs to
-change it or to not being using all of its features.</p>
+    <p>This is an ongoing project where we want to collect
+        components that respect the above rules. Ideally every component should be as
+        much minimalistic and abstract as possible and you should not feel the needs to
+        change it or to not being using all of its features.</p>
 
-<p>Sometimes we end up implementing again and again the same behavioral pattern for
-lot of front-end components. A very basic example may be show different contents
-on a div depending on props, or more complex things like a full-blown stateless
-slider with no interface or any other styling than the very strictly needed for
-layout and animation.</p>
+    <p>Sometimes we end up implementing again and again the same behavioral pattern for
+        lot of front-end components. A very basic example may be show different contents
+        on a div depending on props, or more complex things like a full-blown stateless
+        slider with no interface or any other styling than the very strictly needed for
+        layout and animation.</p>
 
-<p>This library want to abstract these patterns and its expected usage on real
-world project would be to create complete and styled front-end components that
-use anarchism components as dependencies to implement their behavior.</p>
+    <p>This library want to abstract these patterns and its expected usage on real
+        world project would be to create complete and styled front-end components that
+        use anarchism components as dependencies to implement their behavior.</p>
 
-<h2>
-<a id="want-to-contribute" class="anchor" href="#want-to-contribute" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Want to contribute?</h2>
+    <h2>
+        <a id="want-to-contribute" class="anchor" href="#want-to-contribute" aria-hidden="true"><span aria-hidden="true"
+                                                                                                      class="octicon octicon-link"></span></a>Want
+        to contribute?</h2>
 
-<p>There are at least 4 ways to contribute to the project:</p>
+    <p>There are at least 4 ways to contribute to the project:</p>
 
-<ul>
-<li>Adding very simple components that abstract some basic pattern directly inside
-this repository</li>
-<li>Open an issue to propose an external project (available on npm) that may fit
-inside the library</li>
-<li>bug fixing, testing and cross-browser issues solving are always welcome</li>
-<li>contribute to the example folder with interesting components created using
-anarchism</li>
-</ul>
+    <ul>
+        <li>Adding very simple components that abstract some basic pattern directly inside
+            this repository
+        </li>
+        <li>Open an issue to propose an external project (available on npm) that may fit
+            inside the library
+        </li>
+        <li>bug fixing, testing and cross-browser issues solving are always welcome</li>
+        <li>contribute to the example folder with interesting components created using
+            anarchism
+        </li>
+    </ul>
 
-<h2>
-<a id="list-of-pure-components" class="anchor" href="#list-of-pure-components" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>List of pure components</h2>
+    <h2>
+        <a id="list-of-pure-components" class="anchor" href="#list-of-pure-components" aria-hidden="true"><span
+                aria-hidden="true" class="octicon octicon-link"></span></a>List of pure components</h2>
 
-<ul>
-<li>
-<a href="https://github.com/zalando/react-zlide">zlide</a> - Lightweight and stateless
-slider component for React.js</li>
-<li>
-<a href="https://github.com/zalando/react-callout">callout</a> - Lightweight and
-stateless callout component for React.js</li>
-<li>
-<a href="https://github.com/zalando/react-zoom">zoom</a> - Lightweight and stateless
-modal component for React.js based on flexbox</li>
-</ul>
+    <ul>
+        <li>
+            <a href="https://github.com/zalando/react-zlide">zlide</a> - Lightweight and stateless
+            slider component for React.js
+        </li>
+        <li>
+            <a href="https://github.com/zalando/react-callout">callout</a> - Lightweight and
+            stateless callout component for React.js
+        </li>
+        <li>
+            <a href="https://github.com/zalando/react-zoom">zoom</a> - Lightweight and stateless
+            modal component for React.js based on flexbox
+        </li>
+    </ul>
 
-<h2>
-<a id="list-of-impure-components" class="anchor" href="#list-of-impure-components" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>List of impure components</h2>
+    <h2>
+        <a id="list-of-impure-components" class="anchor" href="#list-of-impure-components" aria-hidden="true"><span
+                aria-hidden="true" class="octicon octicon-link"></span></a>List of impure components</h2>
 
-<ul>
-<li>
-<a href="https://github.com/zalando/intreact">intreact</a> - Handling interactions with
-dumb react components.</li>
-<li>
-<a href="https://github.com/zalando/rezponsive">rezponsive</a> - React decorator for
-responsive behaviors.</li>
-</ul>
+    <ul>
+        <li>
+            <a href="https://github.com/zalando/intreact">intreact</a> - Handling interactions with
+            dumb react components.
+        </li>
+        <li>
+            <a href="https://github.com/zalando/rezponsive">rezponsive</a> - React decorator for
+            responsive behaviors.
+        </li>
+    </ul>
 
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/zalando-incubator/anarchism">Anarchism</a> is maintained by <a href="https://github.com/zalando-incubator">zalando-incubator</a>.</span>
+</section>
 
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
-
-    </section>
-
-  
-  </body>
+</body>
 </html>
